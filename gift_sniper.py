@@ -9,7 +9,7 @@ import humanize
 
 # ------------- SETTINGS START -------------
 # how much max to buy
-HOW_MUCH = 2
+HOW_MUCH = 1000
 # telegram ID of user to whom send gifts
 OWNER_ID = 270954850
 TIMEOUT_BUY_IN_SECONDS = 1.2  # min 1.01 (maybe)
@@ -18,9 +18,9 @@ TELEGRAM_BOT_TOKEN = "7803866275:AAEtVrdjQxOhBdgxSfTkE_fOD1llHsdBYWs"
 # optional param for debug reporting
 SENTRY_API_KEY = ""
 # if True will ignore checks and will buy the most expensive gifts for specified [how_much]
-DO_FORCE_BUY = True
+DO_FORCE_BUY = False
 # if the most expensive collection has more than this then ignore it
-MAX_COLLECTION_TOTAL_COUNT = 500_000
+MAX_COLLECTION_TOTAL_COUNT = 6_000
 # ------------- SETTINGS END -------------
 
 
@@ -118,7 +118,7 @@ class WatchForNewGifts:
             while True:
                 print("\n-> Sleeping for 4s")
                 time.sleep(4)
-                
+
                 new_limited_gifts_available = self.check_for_new_limited_gifts()
 
                 if new_limited_gifts_available or DO_FORCE_BUY:

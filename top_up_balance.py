@@ -11,7 +11,7 @@ from aiogram.filters import Command
 
 # ------------- SETTINGS START -------------
 TELEGRAM_BOT_TOKEN = "7803866275:AAEtVrdjQxOhBdgxSfTkE_fOD1llHsdBYWs"  # token for bot, obtained from @botfather # fmt: skip
-HOW_MUCH_STARS = 10000
+HOW_MUCH_STARS = 100000
 # ------------- SETTINGS END -------------
 
 
