@@ -93,7 +93,7 @@ class WatchForNewGifts:
         self.gift_id_to_buy = gift_to_buy["id"]
 
         if "upgrade_star_count" in gift_to_buy:
-            self.could_gift_be_upgraded = True
+            self.could_gift_be_upgraded = False
         return gift_to_buy["id"]
 
     def bulk_buy_gifts(self) -> None:
